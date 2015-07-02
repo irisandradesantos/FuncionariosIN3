@@ -1,0 +1,113 @@
+﻿@model IEnumerable<FuncionariosIN3.Models.Funcionario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<label style="color:red; visibility:hidden">Mensagem</label>
+
+<div class="panel panel-default">
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="color: cornflowerblue; width:250px">Opções de Pesquisa</th>
+                <th style="color: cornflowerblue; width:250px">&nbsp;&nbsp;&nbsp;Informação a Pesquisar</th>
+                <th style="color: cornflowerblue; width:250px">Registro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    <div class="dropdown">
+                        
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+
+                    </div>
+                </th>
+                <th>
+                    <div class="col-lg-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                                <button class="btn btn-default" type="button">Go!</button>
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                </th>
+                <th>
+                    <input type="text" class="form-control" placeholder="Search for...">
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="panel panel-default">
+    <table class="table">
+        <tr>
+            <th style="color: cornflowerblue;">
+                @Html.DisplayNameFor(model => model.cdFuncionario)
+            </th>
+            <th style="color: cornflowerblue;">
+                @Html.DisplayNameFor(model => model.dsNome)
+            </th>
+            <th style="color: cornflowerblue;">
+                @Html.DisplayNameFor(model => model.dtAdmissao)
+            </th>
+            <th style="color: cornflowerblue;">
+                @Html.DisplayNameFor(model => model.cdCargo)
+            </th>
+            <th style="color: cornflowerblue;">
+                @Html.DisplayNameFor(model => model.vlSalario)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cdFuncionario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dsNome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dtAdmissao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cdCargo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vlSalario)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.cdFuncionario }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.cdFuncionario }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.cdFuncionario })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>
+    <p>
+        <a href="@Url.Action("Create", "Funcionarios")" class="btn btn-primary">
+            Incluir
+        </a>
+        
+    </p>

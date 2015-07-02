@@ -1,0 +1,106 @@
+﻿@model FuncionariosIN3.Models.Funcionario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dsNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dsNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dsEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dsEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dsCPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dsCPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dtAdmissao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtAdmissao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dtNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.biAtivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.biAtivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cdCargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cdCargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vlSalario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vlSalario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dsObservacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dsObservacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dtSysInclusao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtSysInclusao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dtSysAlteracao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtSysAlteracao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cdFuncionario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
